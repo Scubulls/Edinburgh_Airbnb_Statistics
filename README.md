@@ -202,15 +202,15 @@ Join the `edibnb` to the `council` data frames. Create a bar plot of the `neighb
 ✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document , knit the document, make sure that your added R code chunk works well and you did not face with any knitting problem*
 
 ```{r, Question4}
-edibnb_council <- left_join(edibnb, council, by = "id")
+edibnbCouncil <- left_join(edibnb, council, by = "id")
 
 
 
-edicon_assesed <- edibnb_council %>% filter(!is.na(id))
+ediConReview <- edibnbCouncil %>% filter(!is.na(id))
 
 
 
-ggplot(data = edicon_assesed , aes(x = neighbourhood)) +
+ggplot(data = ediConReview , aes(x = neighbourhood)) +
         geom_bar(fill = "navyblue") +
         labs(title = "Neighbourhoods",x = "Neighbourhood", y = "Count")
 
@@ -223,6 +223,6 @@ ggplot(data = edicon_assesed , aes(x = neighbourhood)) +
 
 **Finally, we prepare a data set to see a city planning and visualize this data set in the form of a bar chart and interpret it. As a result, if we have to interpret the final graph, we can clearly see that not all regions are given the necessary attention, some regions are given great importance, some regions are given as much importance as a quarter of them, and finally there is a huge support for the Letih region.**
 
+## Note
 
-### This is rmd file
-
+**I change file routes because I import all files in one folder.**
