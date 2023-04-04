@@ -1,15 +1,18 @@
 # Edinburgh_Airbnb_Statistics
 DS2 Homework1
-
 ---
-title: "HW 01 - All about Edinburgh"
-subtitle: "Due: 4 April, 23:59 TR time"
-output: 
-  tufte::tufte_html:
-    css: ../hw.css
-    tufte_variant: "envisioned"
-    highlight: pygments
-link-citations: yes
+title: "Homework 1"
+author: Arda Kara
+date: 04 Nisan 2023
+header-includes:
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \fancyfoot[LE,RO]{\thepage}
+    - \fancyfoot[LO,RE]{\thepage}
+output:
+    html_document:
+        keep_md: true
+        toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -114,7 +117,7 @@ council <- read_csv("council_assessments.csv")
 ```
 
 
-## Exercise 1
+## Exercise 1 (15 pts)
 
 - In the `edibnb` data set, what is the ID of the listing that has the highest number of reviews with a perfect review score of 100%? 
 
@@ -143,7 +146,7 @@ vis_miss(edibnb)
 
 **Firstly, we take all 100% ratings in a subset then we are visualize the data set according to their classes and according to missing data.**
 
-## Exercise 2
+## Exercise 2 (25 pts)
 
 Calculate the minimum, maximum and average price from the Airbnb properties in Southside for a single night stay for four people (Try to use the `summarise` function).
 
@@ -160,7 +163,7 @@ str(Southside_Calculation)
 
 **Secondly, again we collect the requested data in a subset then we do the minimum, maximum and average transactions requested from us.**
 
-## Exercise 3
+## Exercise 3 (30 pts)
 
 When looking at the data you will notice that some of the listings have a value for the number of bathrooms that is not a whole number, e.g. 1.5 or 2.5. 
 
@@ -187,7 +190,7 @@ print(nrow(edibnb4))
 
 **Thirdly, we round the double data of the bathrooms to the integer and use the mutate and ceiling functions for this. Then we create a subset of houses with less than a bedroom bathroom. And finally, we count rows to see how many pieces of data there are.**
 
-## Exercise 4
+## Exercise 4 (40 pts)
 
 Join the `edibnb` to the `council` data frames. Create a bar plot of the `neighbourhood` variable for the properties that have been assessed by the council (remember to iterate the data visualization to make it as informative as possible). 
 
@@ -219,7 +222,6 @@ ggplot(data = edicon_assesed , aes(x = neighbourhood)) +
 ```
 
 **Finally, we prepare a data set to see a city planning and visualize this data set in the form of a bar chart and interpret it. As a result, if we have to interpret the final graph, we can clearly see that not all regions are given the necessary attention, some regions are given great importance, some regions are given as much importance as a quarter of them, and finally there is a huge support for the Letih region.**
-
 
 
 ### This is rmd file
