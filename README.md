@@ -1,7 +1,7 @@
 # Edinburgh_Airbnb_Statistics
-DS2 Homework1
+It is a assigment
 ---
-title: "Homework 1"
+title: "Assigment 1"
 author: Arda Kara
 date: 04 Nisan 2023
 header-includes:
